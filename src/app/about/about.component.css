@@ -1,0 +1,33 @@
+
+main {
+    background-image: url("https://img.freepik.com/free-vector/3d-perspective-style-diamond-shape-white-background_1017-27556.jpg?size=626&ext=jpg&ga=GA1.2.1379686886.1650446144");
+    background-repeat: no-repeat;
+    background-size: cover; 
+   }
+.card {
+    border: none;
+    background-color: #c7cccc;
+}
+
+.user-content p {
+    margin-top: 1px;
+    font-size: 12px
+}
+
+.ratings i {
+    color: yellow;
+}
+.card:hover {
+    box-shadow: 0 0 45px rgb(156, 154, 154)
+}
+.heart {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    top: 10px;
+}
+  

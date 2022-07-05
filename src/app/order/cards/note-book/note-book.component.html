@@ -1,0 +1,50 @@
+
+<div class="jumbotron" style="background: linear-gradient(45deg, rgb(47, 248, 255), rgb(210, 30, 255));">
+  <div class="card" style="background: linear-gradient(to top left, #00ffff 0%, #ffccff 100%);" >
+      <form [formGroup]="contactForm">
+          <div class="row">
+              <div class="row col-sm-12">
+                  
+                   <br>
+                  <h1 style="text-align: center;font-weight: bold;">&nbsp; Fill the Details</h1>
+                  <br><br>
+                  <div class="card-body">
+                  <div class="form-group">
+                      <label for="username">Name</label>
+                      <input type="text" id="username" name="username" formControlName="username" class="form-control" >
+                  </div><br><br>
+                  
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" formControlName="email" class="form-control" >               
+                      <div *ngIf="f.email.touched && f.email.errors" class="alert alert-danger">
+                        <div *ngIf="f.email.errors?.required">Email is required</div>
+                        <div *ngIf="f.email.errors?.pattern">Email must be a valid email 
+                       address</div>
+                       </div>
+                  </div><br><br>
+                  <div class="form-group">
+                      <label for="phone">Phone no</label>
+                      <input type="text" id="phone" name="phone" formControlName="phone" class="form-control" >                      
+                      <div *ngIf="f.phone.touched && f.phone.invalid" class="alert alert-danger">
+                        <div *ngIf="f.phone.errors?.required">Mobile number is required</div>
+                        <div *ngIf="f.phone.errors?.pattern">Provide 10 digit phone number</div>
+                      </div>
+                  </div><br><br>
+                  <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button class="btn btn-info" (click)="onPushUser()" [disabled]="!contactForm.valid" style="color: white;" >Save Details</button>&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button class="btn btn-info" type="reset" (click)="onSave()" [disabled]="!contactForm.valid" style="color: white;" >Submit</button>
+                     
+                  </div>
+                </div>
+                  <br><br><br>
+              </div>
+              
+          </div>
+          </form>
+          </div>
+      
+  </div>
+       
+          

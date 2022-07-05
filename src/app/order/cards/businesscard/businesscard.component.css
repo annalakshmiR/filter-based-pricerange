@@ -1,0 +1,11 @@
+.jumbotron {
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, rgb(47, 248, 255), rgb(210, 30, 255));
+  font-family: "Sansita Swashed", cursive;
+}

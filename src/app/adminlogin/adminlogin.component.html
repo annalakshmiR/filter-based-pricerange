@@ -1,0 +1,30 @@
+
+<div class="jumbotron" style=" background: linear-gradient(to bottom right, #66ffff 0%, #ff99cc 100%);">
+    <br><br><br><br><br>
+      <div class="card">
+        <div class="card-header">
+          <h2 style="color: blue;">Login</h2>
+        </div>
+          <div class="card-body">
+            <form [formGroup]="loginForm" >
+              <div class="mb-3">
+                <label for="email"  class="form-label">Email / Username</label>
+                <input formControlName="email" type="email" class="form-control" id="email" placeholder="Mail id">
+              </div>
+              <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</span>
+              <br><br>
+              <div class="mb-3">
+                <label for="pass"  class="form-label">Password</label>
+                <input formControlName="password" type="password" class="form-control" id="pass" placeholder="Password">
+              </div>
+              <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</span><br><br>
+              <button class="btn btn-primary" (click)="submit()">Login</button>
+            </form>
+          </div>
+          
+      </div>
+      <br><br><br><br><br><br>
+      </div>
+  
+
+
